@@ -20,13 +20,14 @@ En este proyecto, el objetivo fue construir una aplicación backend que administ
 
 ## B. Demo
 
-Visita la aplicación aquí: [LINK](https://github.com/UDDBootcamp/7M_FULLSTACK_M4_PROY/tree/master/demo)
+Visita la aplicación aquí: [LINK](https://proyecto-6-aplicaci-n-backend-con.onrender.com/)
 
 En la app, se muestra la gestión de reservas hoteleras. Donde se comprenden todos los requisitos solicitados.
 
 La documentación de la API en esta app utiliza Swagger y OpenAPI.
 
-![](./images/api.png)
+Visita la documentación aquí: [LINK](https://proyecto-6-aplicaci-n-backend-con.onrender.com/api-docs)
+
 
 ---
 
@@ -161,7 +162,7 @@ Proyecto\ 4\ Reservas\ Hoteleras
 
 ### DESPLIEGUE (OPCIONAL)
 
-- [OK] Se despliega en una URL de producción el proyecto, a través de [netlify.com](https://netlify.com)
+- [OK] Se despliega en una URL de producción el proyecto, a través de [render.com](https://render.com)
 
 ---
 
