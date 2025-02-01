@@ -72,19 +72,24 @@ Proyecto\ 4\ Reservas\ Hoteleras
 
 | Descripción del Endpoint           | Método | Endpoint           | Ejemplo. Caso de uso.                                                                                                            |
 | ---------------------------------- | ------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| Registrar un usuario               | POST   | /api/user/register | Como usuario, quiero registrarme en la plataforma proporcionando mi nombre, correo electrónico y una contraseña.                 |
-| Iniciar sesión de usuario          | POST   | /api/user/login    | Como usuario, quiero iniciar sesión en la plataforma utilizando mi correo electrónico y contraseña para acceder a mis productos. |
-| Actualizar información del usuario | PUT    | /api/user/update   | Como usuario, quiero actualizar mi información de perfil, como mi nombre, correo electrónico y contraseña.                       |
+| Registrar un usuario               | POST   | /user/register | Ruta para realizar el login de usuario.                 |
+| Iniciar sesión de usuario          | POST   | /user/login    | Ruta para registrar un nuevo usuario. |
+| Actualizar información del usuario | PUT    | /user/update   | Ruta para actualizar la contraseña de un usuario autenticado.                       |
 
 ### Endpoints para Producto:
 
 | Descripción del Endpoint    | Método | Endpoint                 | Ejemplo. Caso de uso.                                                                                                                    |
 | --------------------------- | ------ | ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Crear un producto           | POST   | /api/product/create      | Como vendedor, quiero agregar un nuevo producto a mi catálogo proporcionando detalles como el nombre del producto, descripción y precio. |
-| Leer todos los productos    | GET    | /api/product/readall     | Como comprador, quiero ver todos los productos disponibles en el catálogo para poder seleccionar uno para comprar.                       |
-| Leer un producto específico | GET    | /api/product/readone/:id | Como comprador, quiero ver los detalles de un producto específico utilizando su ID para decidir si quiero comprarlo.                     |
-| Actualizar un producto      | PUT    | /api/product/update/:id  | Como vendedor, quiero actualizar los detalles de un producto específico, como su nombre, descripción y precio.                           |
-| Eliminar un producto        | DELETE | /api/product/delete/:id  | Como vendedor, quiero eliminar un producto específico de mi catálogo cuando ya no esté disponible para la venta.                         |
+| Crear un producto           | POST   | /product      | Ruta para crear un nuevo producto (requiere autenticación). |
+| Leer todos los productos    | GET    | /product     | Ruta para listar todos los productos (requiere autenticación).                       |
+| Leer un producto específico por ID | GET    | /product/:id | Ruta para obtener un producto específico por ID (requiere autenticación).                     |
+| Leer un producto específico por Hotel | GET    | /product/hotel | Ruta para buscar productos por hotel (requiere autenticación).                     |
+| Leer un producto específico por habitación| GET    | /product/roomtype | Ruta para buscar productos por tipo de habitación (requiere autenticación).                     |
+| Leer un producto específico por Rango de Fechas | GET    | /product/dates | Ruta para buscar productos por rango de fechas (requiere autenticación)).                     |
+| Leer un producto específico por Dato de Pasajero| GET    | /product/adults | Ruta para buscar productos por número de pasajeros adultos (requiere autenticación).                     |
+| Leer un producto específico por Dato de Estado| GET    | /product/state | Ruta para buscar productos por estado de la reserva (requiere autenticación).                    |
+| Actualizar un producto      | PUT    | /product/update/:id  | Como vendedor, quiero actualizar los detalles de un producto específico, como su nombre, descripción y precio.                           |
+| Eliminar un producto        | DELETE | /product/delete/:id  | Como vendedor, quiero eliminar un producto específico de mi catálogo cuando ya no esté disponible para la venta.                         |
 
 - Los Tokens de JWT son almacenados en LocalStorage por lo que los datos de sesión quedan almacenados de forma local.
 
